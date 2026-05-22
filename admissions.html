@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admissions at Ideal Learning Academy – process, requirements, and online application.">
+    <title>Admissions | Ideal Learning Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style-admissions.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+    <div class="preloader-content">
+        <div class="preloader-logo">
+            <i class="fa-solid fa-star-and-crescent"></i>
+            <span>ILA</span>
+        </div>
+        <div class="preloader-stars" id="preloaderStars">
+            <i class="fa-regular fa-star star" data-index="0"></i>
+            <i class="fa-regular fa-star star" data-index="1"></i>
+            <i class="fa-regular fa-star star" data-index="2"></i>
+            <i class="fa-regular fa-star star" data-index="3"></i>
+            <i class="fa-regular fa-star star" data-index="4"></i>
+        </div>
+        <div class="preloader-bar-container">
+            <div class="preloader-bar" id="preloaderBar"></div>
+        </div>
+        <div class="preloader-percentage" id="preloaderPercentage">0%</div>
+        <p id="preloaderQuote" class="preloader-text"></p>
+    </div>
+</div>
+    <!-- Custom cursor -->
+    <div id="cursorDot" class="cursor-dot"></div>
+    <div id="cursorRing" class="cursor-ring"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-phone"></i> +1 (555) 200-7860</span>
+                <span><i class="fa-solid fa-envelope"></i> info@idealacademy.edu</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="student-dashboard.html" class="btn-portal-link"><i class="fa-solid fa-user-graduate"></i> Student Portal</a>
+                <div class="top-social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="mainHeader">
+        <nav class="navbar container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i class="fa-solid fa-star-and-crescent"></i></div>
+                <div class="logo-text"><span class="logo-title">Ideal Learning</span><span class="logo-subtitle">Academy</span></div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="academics.html" class="nav-link">Academics</a></li>
+                <li><a href="admissions.html" class="nav-link active">Admissions</a></li>
+                <li><a href="islamic-life.html" class="nav-link">Islamic Life</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="admissions.html" class="btn btn-primary btn-sm">Apply Now</a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header bg-green-gradient text-center">
+        <div class="container">
+            <h1>Admissions</h1>
+            <p>Join a community where faith and learning grow together</p>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-label"><i class="fa-solid fa-circle gold-dot"></i> How to Apply</h3>
+                <h2 class="section-title">Admission Process</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step"><span class="step-number">1</span><h4>Submit Application</h4><p>Fill out the online form and pay the $50 fee.</p></div>
+                <div class="step"><span class="step-number">2</span><h4>Assessment Test</h4><p>Age-appropriate academic and Quran readiness test.</p></div>
+                <div class="step"><span class="step-number">3</span><h4>Family Interview</h4><p>Meet with our admissions team to align expectations.</p></div>
+                <div class="step"><span class="step-number">4</span><h4>Enrollment</h4><p>Complete registration, uniform purchase, and orientation.</p></div>
+            </div>
+            <p class="text-center mt-2"><em>Islamic rules: Modest dress code for interview, separate seating for mahrams if required, no music during assessments.</em></p>
+        </div>
+    </section>
+
+    <!-- Requirements & Fees -->
+    <section class="section-padding bg-light-green">
+        <div class="container">
+            <div class="two-col-grid">
+                <div>
+                    <h3>Requirements</h3>
+                    <ul class="checklist">
+                        <li><i class="fa-solid fa-check"></i> Completed application form</li>
+                        <li><i class="fa-solid fa-check"></i> Birth certificate & immunization records</li>
+                        <li><i class="fa-solid fa-check"></i> Previous school transcripts (Grade 1+)</li>
+                        <li><i class="fa-solid fa-check"></i> Two teacher recommendations</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Tuition (2025-26)</h3>
+                    <table class="fee-table">
+                        <tr><th>Grade</th><th>Annual Tuition</th></tr>
+                        <tr><td>Pre-K</td><td>$6,500</td></tr>
+                        <tr><td>K-5</td><td>$7,800</td></tr>
+                        <tr><td>6-8</td><td>$8,500</td></tr>
+                        <tr><td>9-12</td><td>$9,200</td></tr>
+                    </table>
+                    <p><small>Financial aid and sibling discounts available. All fees are halal-compliant (no interest-bearing plans).</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Mock -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Ready to Apply?</h2>
+            <form class="apply-form" id="applyForm">
+                <div class="form-row">
+                    <input type="text" placeholder="Student Full Name" required>
+                    <input type="date" placeholder="Date of Birth" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Parent/Guardian Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-row">
+                    <select required>
+                        <option value="">Applying for Grade</option>
+                        <option>Pre-K</option><option>K</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                    </select>
+                    <input type="tel" placeholder="Phone Number">
+                </div>
+                <textarea placeholder="Any additional information or questions..." rows="4"></textarea>
+                <button type="submit" class="btn btn-gold btn-lg">Submit Application</button>
+            </form>
+            <p class="text-center mt-1"><small>This form is a mock. For actual submission, visit our office or call admissions.</small></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo"><i class="fa-solid fa-star-and-crescent"></i><span>Ideal Learning Academy</span></div>
+                    <p>Balanced, faith-centered education since 2009.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="islamic-life.html">Islamic Life</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Student Resources</h4>
+                    <ul>
+                        <li><a href="student-dashboard.html">Dashboard</a></li>
+                        <li><a href="student-resources.html">Study Resources</a></li>
+                        <li><a href="student-prayer-log.html">Prayer Log</a></li>
+                        <li><a href="student-quran-tracker.html">Quran Tracker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Knowledge Crescent, Springfield, IL</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (555) 200-7860</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@idealacademy.edu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="container"><p>&copy; 2026 Ideal Learning Academy | <span class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span></p></div></div>
+    </footer>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/custom-cursor.js"></script>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+        const mainHeader = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            mainHeader.classList.toggle('scrolled', window.scrollY > 80);
+        });
+        // Prevent form submission for mock
+        document.getElementById('applyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! This is a mock form. Admissions team will contact you.');
+        });
+    </script>
+</body>
+</html>

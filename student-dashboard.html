@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Dashboard – Ideal Learning Academy">
+    <title>Student Dashboard | Ideal Learning Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style-students.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+    <div class="preloader-content">
+        <div class="preloader-logo">
+            <i class="fa-solid fa-star-and-crescent"></i>
+            <span>ILA</span>
+        </div>
+        <div class="preloader-stars" id="preloaderStars">
+            <i class="fa-regular fa-star star" data-index="0"></i>
+            <i class="fa-regular fa-star star" data-index="1"></i>
+            <i class="fa-regular fa-star star" data-index="2"></i>
+            <i class="fa-regular fa-star star" data-index="3"></i>
+            <i class="fa-regular fa-star star" data-index="4"></i>
+        </div>
+        <div class="preloader-bar-container">
+            <div class="preloader-bar" id="preloaderBar"></div>
+        </div>
+        <div class="preloader-percentage" id="preloaderPercentage">0%</div>
+        <p id="preloaderQuote" class="preloader-text"></p>
+    </div>
+</div>
+
+    <!-- Custom cursor -->
+    <div id="cursorDot" class="cursor-dot"></div>
+    <div id="cursorRing" class="cursor-ring"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-phone"></i> +1 (555) 200-7860</span>
+                <span><i class="fa-solid fa-envelope"></i> info@idealacademy.edu</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="student-dashboard.html" class="btn-portal-link"><i class="fa-solid fa-user-graduate"></i> Student Portal</a>
+                <div class="top-social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="mainHeader">
+        <nav class="navbar container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i class="fa-solid fa-star-and-crescent"></i></div>
+                <div class="logo-text"><span class="logo-title">Ideal Learning</span><span class="logo-subtitle">Academy</span></div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="academics.html" class="nav-link">Academics</a></li>
+                <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                <li><a href="islamic-life.html" class="nav-link">Islamic Life</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="admissions.html" class="btn btn-primary btn-sm">Apply Now</a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== LOGIN SECTION (shown when not logged in) ===== -->
+    <section id="loginSection" class="section-padding bg-light-green" style="display: none;">
+        <div class="container">
+            <div class="login-card">
+                <h2><i class="fa-solid fa-lock"></i> Student Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-gold">Login</button>
+                    <p class="login-hint">Demo: username <strong>student</strong> / password <strong>islam</strong></p>
+                </form>
+                <p id="loginError" style="color: red; display: none;">Invalid credentials. Please try again.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DASHBOARD SECTION (shown when logged in) ===== -->
+    <section id="dashboardSection" class="section-padding" style="display: none;">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Welcome, <span id="studentName">Student</span>!</h1>
+                <button id="logoutBtn" class="btn btn-primary btn-sm"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </div>
+
+            <!-- Prayer Reminder -->
+            <div class="dashboard-card prayer-reminder">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Prayer Reminder</h3>
+                <p>Don't forget your Dhuhr prayer. Next Athan in <strong>15 minutes</strong>.</p>
+            </div>
+
+            <!-- Quran Verse of the Day (static) -->
+            <div class="dashboard-card quran-verse">
+                <i class="fa-solid fa-book-quran"></i>
+                <h3>Daily Quran Verse</h3>
+                <p class="arabic-text">وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا</p>
+                <p><em>"And whoever fears Allah – He will make for him a way out."</em> (Quran 65:2)</p>
+            </div>
+
+            <!-- Assignments -->
+            <div class="dashboard-card assignments">
+                <h3><i class="fa-solid fa-clipboard-list"></i> Assignments</h3>
+                <ul>
+                    <li><strong>Math:</strong> Algebra worksheet – Due May 25</li>
+                    <li><strong>Science:</strong> Lab report – Due May 26</li>
+                    <li><strong>Quran:</strong> Memorize Surah Al-Mulk (1-10) – Due May 27</li>
+                    <li><strong>Islamic Studies:</strong> Essay on Seerah – Due May 28</li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="dashboard-links">
+                <a href="student-resources.html" class="btn btn-primary">Study Resources</a>
+                <a href="student-prayer-log.html" class="btn btn-gold">Prayer Log</a>
+                <a href="student-quran-tracker.html" class="btn btn-primary">Quran Tracker</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo"><i class="fa-solid fa-star-and-crescent"></i><span>Ideal Learning Academy</span></div>
+                    <p>Balanced, faith-centered education since 2009.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="islamic-life.html">Islamic Life</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Student Resources</h4>
+                    <ul>
+                        <li><a href="student-dashboard.html">Dashboard</a></li>
+                        <li><a href="student-resources.html">Study Resources</a></li>
+                        <li><a href="student-prayer-log.html">Prayer Log</a></li>
+                        <li><a href="student-quran-tracker.html">Quran Tracker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Knowledge Crescent, Springfield, IL</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (555) 200-7860</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@idealacademy.edu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="container"><p>&copy; 2026 Ideal Learning Academy | <span class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span></p></div></div>
+    </footer>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/custom-cursor.js"></script>
+    <script src="js/student-login.js"></script>
+    <script>
+        // Mobile menu
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+        const mainHeader = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            mainHeader.classList.toggle('scrolled', window.scrollY > 80);
+        });
+
+        // Dashboard / Login logic
+        const loginSection = document.getElementById('loginSection');
+        const dashboardSection = document.getElementById('dashboardSection');
+        const loginForm = document.getElementById('loginForm');
+        const loginError = document.getElementById('loginError');
+        const logoutBtn = document.getElementById('logoutBtn');
+
+        function showLogin() {
+            loginSection.style.display = 'block';
+            dashboardSection.style.display = 'none';
+        }
+
+        function showDashboard() {
+            loginSection.style.display = 'none';
+            dashboardSection.style.display = 'block';
+            document.getElementById('studentName').textContent = StudentAuth.getStudentName();
+        }
+
+        // On page load
+        if (StudentAuth.isLoggedIn()) {
+            showDashboard();
+        } else {
+            showLogin();
+        }
+
+        // Login form submit
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            if (StudentAuth.login(username, password)) {
+                showDashboard();
+                loginError.style.display = 'none';
+            } else {
+                loginError.style.display = 'block';
+            }
+        });
+
+        // Logout
+        logoutBtn.addEventListener('click', function() {
+            StudentAuth.logout();
+            showLogin();
+        });
+    </script>
+</body>
+</html>

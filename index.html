@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta & SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ideal Learning Academy – A modern Islamic school nurturing minds with academic excellence and Islamic values. Admissions open for 2025-26.">
+    <meta name="keywords" content="Islamic school, modern education, Islamic academy, Quran learning, halal education, Muslim school">
+    <meta name="author" content="Ideal Learning Academy">
+    <title>Ideal Learning Academy | Modern Islamic Education</title>
+
+    <!-- Google Fonts: Poppins + Amiri (Arabic-style headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ==================== PRELOADER STRUCTURE ==================== -->
+<!-- Animated by preloader.js – quotes are page‑specific, injected by JS -->
+<div id="preloader">
+    <div class="preloader-content">
+        <div class="preloader-logo">
+            <i class="fa-solid fa-star-and-crescent"></i>
+            <span>ILA</span>
+        </div>
+        <!-- 5 stars light up at 20% intervals (one per second) -->
+        <div class="preloader-stars" id="preloaderStars">
+            <i class="fa-regular fa-star star" data-index="0"></i>
+            <i class="fa-regular fa-star star" data-index="1"></i>
+            <i class="fa-regular fa-star star" data-index="2"></i>
+            <i class="fa-regular fa-star star" data-index="3"></i>
+            <i class="fa-regular fa-star star" data-index="4"></i>
+        </div>
+        <!-- Progress bar -->
+        <div class="preloader-bar-container">
+            <div class="preloader-bar" id="preloaderBar"></div>
+        </div>
+        <!-- Percentage counter -->
+        <div class="preloader-percentage" id="preloaderPercentage">0%</div>
+        <!-- Quote container – automatically filled by preloader.js with home‑page quotes -->
+        <p id="preloaderQuote" class="preloader-quote">Loading knowledge &amp; wisdom...</p>
+    </div>
+</div>
+
+    <!-- ==================== CUSTOM CURSOR PLACEHOLDERS ==================== -->
+    <!-- Animated by custom-cursor.js (Phase 3) -->
+    <div id="cursorDot" class="cursor-dot"></div>
+    <div id="cursorRing" class="cursor-ring"></div>
+
+    <!-- ==================== TOP BAR ==================== -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-phone"></i> +1 (555) 200-7860</span>
+                <span><i class="fa-solid fa-envelope"></i> info@idealacademy.edu</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="student-dashboard.html" class="btn-portal-link"><i class="fa-solid fa-user-graduate"></i> Student Portal</a>
+                <div class="top-social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN NAVBAR ==================== -->
+    <header id="mainHeader">
+        <nav class="navbar container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-star-and-crescent"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">Ideal Learning</span>
+                    <span class="logo-subtitle">Academy</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="academics.html" class="nav-link">Academics</a></li>
+                <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                <li><a href="islamic-life.html" class="nav-link">Islamic Life</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="admissions.html" class="btn btn-primary btn-sm">Apply Now</a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="heroSection">
+        <div class="hero-pattern"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <div class="hero-badge">
+                <i class="fa-solid fa-graduation-cap"></i> Admissions Open 2025-26
+            </div>
+            <h1 class="hero-title">
+                Nurturing <span class="gold-text">Excellence</span><br>
+                in Modern <span class="gold-text">Islamic</span> Education
+            </h1>
+            <p class="hero-subtitle">
+                Where academic rigor meets spiritual growth. Building the next generation of confident,
+                knowledgeable, and morally grounded Muslim leaders.
+            </p>
+            <div class="hero-buttons">
+                <a href="admissions.html" class="btn btn-gold">Start Your Journey</a>
+                <a href="about.html" class="btn btn-outline-light">Discover More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1,200+</span>
+                    <span class="stat-label">Students Enrolled</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">College Acceptance</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1:12</span>
+                    <span class="stat-label">Teacher Ratio</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 C240,100 480,0 720,40 C960,80 1200,20 1440,60 L1440,100 L0,100 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== WELCOME SECTION ==================== -->
+    <section class="welcome section-padding" id="welcomeSection">
+        <div class="container">
+            <div class="welcome-grid">
+                <div class="welcome-image-wrapper">
+                    <div class="welcome-image-frame">
+                        <img src="https://picsum.photos/seed/islamic-school/600/450" alt="Ideal Learning Academy Campus" loading="lazy">
+                        <div class="welcome-image-badge">
+                            <i class="fa-solid fa-mosque"></i> Est. 2009
+                        </div>
+                    </div>
+                </div>
+                <div class="welcome-content">
+                    <h3 class="section-label">
+                        <i class="fa-solid fa-circle gold-dot"></i> Welcome to ILA
+                    </h3>
+                    <h2 class="section-title">Modern Education Rooted in <span class="gold-text">Islamic Values</span></h2>
+                    <p class="welcome-text">
+                        At Ideal Learning Academy, we believe that academic excellence and Islamic character
+                        go hand in hand. Our unique curriculum integrates a rigorous modern education with
+                        Quranic studies, Arabic language, and Islamic ethics — all within a nurturing,
+                        faith-centered environment. We prepare students not just for college and career,
+                        but for a life of purpose, integrity, and service to humanity.
+                    </p>
+                    <div class="welcome-features">
+                        <div class="w-feature">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>STEAM + Islamic Studies</span>
+                        </div>
+                        <div class="w-feature">
+                            <i class="fa-solid fa-person-praying"></i>
+                            <span>Daily Prayer Accommodations</span>
+                        </div>
+                        <div class="w-feature">
+                            <i class="fa-solid fa-certificate"></i>
+                            <span>Accredited K-12 Program</span>
+                        </div>
+                        <div class="w-feature">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Arabic &amp; Quran Curriculum</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary">Learn Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRAYER TIMES WIDGET CONTAINER ==================== -->
+    <!-- Populated dynamically by prayer-times.js (Phase 8) -->
+    <section class="prayer-widget-section section-padding bg-light-green" id="prayerWidgetSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-label">
+                    <i class="fa-solid fa-circle gold-dot"></i> Daily Devotion
+                </h3>
+                <h2 class="section-title">Prayer Times</h2>
+                <p class="section-desc">Stay connected to your Creator throughout the day.</p>
+            </div>
+            <div id="prayerTimesWidget" class="prayer-times-widget">
+                <!-- Static placeholder; replaced by JS -->
+                <div class="prayer-card">
+                    <i class="fa-solid fa-cloud-moon"></i>
+                    <span class="prayer-name">Fajr</span>
+                    <span class="prayer-time">5:23 AM</span>
+                </div>
+                <div class="prayer-card">
+                    <i class="fa-solid fa-sun"></i>
+                    <span class="prayer-name">Dhuhr</span>
+                    <span class="prayer-time">12:45 PM</span>
+                </div>
+                <div class="prayer-card">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    <span class="prayer-name">Asr</span>
+                    <span class="prayer-time">4:10 PM</span>
+                </div>
+                <div class="prayer-card">
+                    <i class="fa-solid fa-cloud-sun-rain"></i>
+                    <span class="prayer-name">Maghrib</span>
+                    <span class="prayer-time">7:02 PM</span>
+                </div>
+                <div class="prayer-card">
+                    <i class="fa-solid fa-moon"></i>
+                    <span class="prayer-name">Isha</span>
+                    <span class="prayer-time">8:30 PM</span>
+                </div>
+            </div>
+            <p class="text-center prayer-note"><em>Prayer times are approximate. Check the masjid for exact timings.</em></p>
+        </div>
+    </section>
+
+    <!-- ==================== EVENT COUNTDOWN ==================== -->
+<section class="section-padding bg-light-green text-center" id="eventCountdownSection">
+    <div class="container">
+        <h3 class="section-label"><i class="fa-solid fa-circle gold-dot"></i> Coming Up</h3>
+        <div id="eventCountdown"></div>
+    </div>
+</section>
+
+    <!-- ==================== NEWS & EVENTS SECTION ==================== -->
+    <section class="news-events section-padding" id="newsEventsSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <h3 class="section-label">
+                    <i class="fa-solid fa-circle gold-dot"></i> Stay Updated
+                </h3>
+                <h2 class="section-title">News &amp; Events</h2>
+                <p class="section-desc">Discover what&rsquo;s happening across our academy community.</p>
+            </div>
+            <div class="news-grid">
+                <!-- News Card 1 -->
+                <article class="news-card">
+                    <div class="news-card-img">
+                        <img src="https://picsum.photos/seed/quran-comp/400/260" alt="Quran Competition 2025" loading="lazy">
+                        <span class="news-category">Islamic Life</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date"><i class="fa-regular fa-calendar"></i> May 20, 2026</div>
+                        <h4>Annual Quran Competition Winners Announced</h4>
+                        <p>Congratulations to all 48 participants in this year&rsquo;s Quran memorization and recitation competition.</p>
+                        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <!-- News Card 2 -->
+                <article class="news-card">
+                    <div class="news-card-img">
+                        <img src="https://picsum.photos/seed/science-fair/400/260" alt="Science Fair" loading="lazy">
+                        <span class="news-category">Academics</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date"><i class="fa-regular fa-calendar"></i> May 10, 2026</div>
+                        <h4>STEAM Fair Showcases Student Innovation</h4>
+                        <p>Students presented over 75 projects ranging from robotics to environmental science.</p>
+                        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <!-- News Card 3 -->
+                <article class="news-card">
+                    <div class="news-card-img">
+                        <img src="https://picsum.photos/seed/eid-event/400/260" alt="Eid Celebration" loading="lazy">
+                        <span class="news-category">Community</span>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-date"><i class="fa-regular fa-calendar"></i> April 22, 2026</div>
+                        <h4>Eid-ul-Fitr Celebration Brings Joy to Campus</h4>
+                        <p>Students, staff, and families gathered for a beautiful day of prayer, feasting, and fun.</p>
+                        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section section-padding bg-green-gradient" id="ctaSection">
+        <div class="container text-center">
+            <h2 class="cta-title">Ready to Give Your Child the Best of Both Worlds?</h2>
+            <p class="cta-text">Join the Ideal Learning Academy family. Limited seats available for the 2025-26 academic year.</p>
+            <div class="cta-buttons">
+                <a href="admissions.html" class="btn btn-gold btn-lg">Apply for Admission</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg">Schedule a Tour</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-star-and-crescent"></i>
+                        <span>Ideal Learning Academy</span>
+                    </div>
+                    <p>Providing a balanced, faith-centered education that empowers students to excel academically while living by Islamic principles.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="islamic-life.html">Islamic Life</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Student Resources</h4>
+                    <ul>
+                        <li><a href="student-dashboard.html">Student Dashboard</a></li>
+                        <li><a href="student-resources.html">Study Resources</a></li>
+                        <li><a href="student-prayer-log.html">Prayer Log</a></li>
+                        <li><a href="student-quran-tracker.html">Quran Tracker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Knowledge Crescent,<br>Springfield, IL 62701, USA</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (555) 200-7860</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@idealacademy.edu</li>
+                        <li><i class="fa-solid fa-clock"></i> Mon-Fri: 7:30 AM – 4:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Ideal Learning Academy. All rights reserved. | <span class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- Global scripts (loaded on every page) -->
+    <script src="js/preloader.js"></script>
+    <script src="js/custom-cursor.js"></script>
+
+    <!-- Page‑specific scripts -->
+    <script src="js/prayer-times.js"></script>
+    <script src="js/prayer-times.js"></script>
+    <script src="js/event-countdown.js"></script>
+
+    <!-- Basic mobile menu toggle (will remain inline for simplicity) -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        if (hamburgerBtn && navMenu) {
+            hamburgerBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                hamburgerBtn.classList.toggle('active');
+            });
+        }
+        const mainHeader = document.getElementById('mainHeader');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 80) {
+                mainHeader.classList.add('scrolled');
+            } else {
+                mainHeader.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

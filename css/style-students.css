@@ -1,0 +1,477 @@
+/* =============================================================
+   IDEAL LEARNING ACADEMY – STUDENT PORTAL STYLES
+   Applies to:
+     - student-dashboard.html
+     - student-resources.html
+     - student-prayer-log.html
+     - student-quran-tracker.html
+   Requires style.css (base variables & global rules)
+   ============================================================= */
+
+/* ---------- Shared Student Page Header (if used) ---------- */
+.student-page-header {
+    padding: 60px 0 50px;
+    background: linear-gradient(135deg, #0A3D24 0%, #0D5C3B 40%, #1B7A45 100%);
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.student-page-header::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.student-page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.student-page-header p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+    margin-top: 8px;
+}
+
+/* ---------- LOGIN CARD (Dashboard) ---------- */
+.login-card {
+    max-width: 450px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.login-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 25px;
+}
+.login-card h2 i {
+    color: var(--gold-mid);
+    margin-right: 8px;
+}
+.login-card .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.login-card label {
+    display: block;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 6px;
+}
+.login-card input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--gray-100);
+    border-radius: 10px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+.login-card input:focus {
+    border-color: var(--gold-mid);
+    box-shadow: 0 0 0 4px var(--gold-pale);
+    outline: none;
+}
+.login-card .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+.login-hint {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-top: 15px;
+}
+
+/* ---------- DASHBOARD SECTION ---------- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.dashboard-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+#studentName {
+    color: var(--gold-dark);
+}
+
+/* Dashboard cards */
+.dashboard-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+.dashboard-card:hover {
+    transform: translateY(-3px);
+}
+.dashboard-card i {
+    font-size: 2rem;
+    color: var(--gold-mid);
+    margin-bottom: 10px;
+}
+.dashboard-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--gray-900);
+}
+.dashboard-card p,
+.dashboard-card ul {
+    font-size: 1rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+}
+.dashboard-card ul {
+    list-style: none;
+    padding: 0;
+}
+.dashboard-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--gray-100);
+}
+.dashboard-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* Prayer reminder special */
+.prayer-reminder {
+    border-left: 6px solid var(--green-mid);
+    background: linear-gradient(to right, #F0F7F2, #fff);
+}
+
+/* Quran verse special */
+.quran-verse .arabic-text {
+    font-family: var(--font-arabic);
+    font-size: 2rem;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+}
+
+/* Dashboard quick links */
+.dashboard-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.dashboard-links .btn {
+    flex: 1;
+    text-align: center;
+    min-width: 140px;
+}
+
+/* ---------- RESOURCES PAGE ---------- */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+.resource-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.1);
+}
+.resource-card i {
+    font-size: 2.2rem;
+    color: var(--gold-mid);
+    margin-bottom: 15px;
+    display: block;
+}
+.resource-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 15px;
+}
+.resource-card ul {
+    list-style: none;
+    padding: 0;
+}
+.resource-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 0.95rem;
+    color: var(--gray-700);
+}
+.resource-card ul li a {
+    color: var(--green-mid);
+    font-weight: 500;
+}
+.resource-card ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- PRAYER LOG PAGE ---------- */
+.prayer-log-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+.prayer-log-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 25px;
+    text-align: center;
+}
+.prayer-log-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.prayer-log-form label {
+    font-weight: 600;
+    color: var(--gray-700);
+}
+.prayer-log-form input[type="date"] {
+    padding: 12px 16px;
+    border: 2px solid var(--gray-100);
+    border-radius: 10px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+.prayer-log-form input[type="date"]:focus {
+    border-color: var(--gold-mid);
+    box-shadow: 0 0 0 4px var(--gold-pale);
+    outline: none;
+}
+.prayer-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+.prayer-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+.prayer-checkboxes input[type="checkbox"] {
+    accent-color: var(--green-mid);
+    width: 20px;
+    height: 20px;
+}
+#saveMessage {
+    color: var(--green-mid);
+    font-weight: 600;
+}
+
+/* Weekly summary */
+.weekly-summary h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    margin: 0 auto;
+    max-width: 600px;
+}
+.summary-table th,
+.summary-table td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+.summary-table th {
+    background: var(--green-dark);
+    color: #fff;
+    font-weight: 600;
+}
+.summary-table tr:nth-child(even) {
+    background: var(--green-pale);
+}
+.summary-table tr:nth-child(odd) {
+    background: #fff;
+}
+
+/* ---------- QURAN TRACKER ---------- */
+.juz-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+.juz-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+}
+.juz-item:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.juz-item input[type="checkbox"] {
+    accent-color: var(--green-mid);
+    width: 18px;
+    height: 18px;
+}
+.juz-item span {
+    margin-left: 6px;
+    color: var(--gray-700);
+}
+/* When checked, highlight the whole card */
+.juz-item:has(input:checked) {
+    background: var(--gold-pale);
+    border-color: var(--gold-mid);
+    font-weight: 700;
+}
+
+#progressText {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+    color: var(--green-dark);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .dashboard-links {
+        flex-direction: column;
+    }
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    .juz-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .student-page-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+    .prayer-checkboxes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .juz-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =============================================================
+   STUDENT PAGES – ENHANCED HERO SECTION (overrides .page-header)
+   ============================================================= */
+.page-header {
+    padding: 80px 0 80px;
+    background: linear-gradient(135deg, #0A3D24 0%, #0D5C3B 35%, #1B7A45 100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 4px solid var(--gold-mid);
+}
+
+/* Subtle geometric pattern overlay */
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.02) 35px, rgba(255,255,255,0.02) 36px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,0.02) 35px, rgba(255,255,255,0.02) 36px);
+    pointer-events: none;
+}
+
+/* Decorative circles */
+.page-header::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional small icon before heading (uncomment if desired) */
+/*
+.page-header h1::before {
+    content: '🌟';
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 60px 0 60px;
+    }
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    .page-header p {
+        font-size: 1rem;
+    }
+}

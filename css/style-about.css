@@ -1,0 +1,193 @@
+/* =============================================================
+   IDEAL LEARNING ACADEMY – ABOUT PAGE ENHANCED STYLES
+   Requires style.css (base variables & global rules)
+   ============================================================= */
+
+/* ---------- Page Header Override ---------- */
+.page-header {
+    padding: 80px 0 70px;
+    background: linear-gradient(135deg, #0A3D24 0%, #0D5C3B 40%, #1B7A45 100%);
+    position: relative;
+    overflow: hidden;
+}
+.page-header::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ---------- About Grid (Our Story) ---------- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 20px;
+}
+.about-image {
+    position: relative;
+}
+.about-image img {
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    border: 6px solid #fff;
+    outline: 2px solid var(--gold-light);
+}
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23C9A84C" stroke-width="3" stroke-dasharray="8 8"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.about-text p {
+    font-size: 1.05rem;
+    color: var(--gray-700);
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- Mission & Vision Cards ---------- */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+.mv-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 45px 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.mv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+.mv-card::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 100px;
+    height: 100px;
+    background: var(--gold-pale);
+    border-radius: 50%;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.mv-card i {
+    font-size: 2.8rem;
+    color: var(--gold-mid);
+    margin-bottom: 20px;
+    display: block;
+}
+.mv-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--gray-900);
+}
+.mv-card p {
+    font-size: 1rem;
+    color: var(--gray-500);
+    line-height: 1.8;
+}
+
+/* ---------- Core Values (4-column grid) ---------- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.value-item {
+    background: #fff;
+    border-radius: 16px;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+.value-item i {
+    font-size: 2.5rem;
+    color: var(--green-mid);
+    margin-bottom: 18px;
+    display: block;
+}
+.value-item h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--gray-900);
+}
+.value-item p {
+    font-size: 0.92rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+}
+
+/* ---------- Responsive Finetuning for About Page ---------- */
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-header h1 {
+        font-size: 2.4rem;
+    }
+}
+@media (max-width: 480px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    .mv-card {
+        padding: 30px 25px;
+    }
+}

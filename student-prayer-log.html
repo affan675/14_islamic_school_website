@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Prayer Log – Ideal Learning Academy">
+    <title>Prayer Log | Ideal Learning Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style-students.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+   <div id="preloader">
+    <div class="preloader-content">
+        <div class="preloader-logo">
+            <i class="fa-solid fa-star-and-crescent"></i>
+            <span>ILA</span>
+        </div>
+        <div class="preloader-stars" id="preloaderStars">
+            <i class="fa-regular fa-star star" data-index="0"></i>
+            <i class="fa-regular fa-star star" data-index="1"></i>
+            <i class="fa-regular fa-star star" data-index="2"></i>
+            <i class="fa-regular fa-star star" data-index="3"></i>
+            <i class="fa-regular fa-star star" data-index="4"></i>
+        </div>
+        <div class="preloader-bar-container">
+            <div class="preloader-bar" id="preloaderBar"></div>
+        </div>
+        <div class="preloader-percentage" id="preloaderPercentage">0%</div>
+        <p id="preloaderQuote" class="preloader-text"></p>
+    </div>
+</div>
+
+    <!-- Custom cursor -->
+    <div id="cursorDot" class="cursor-dot"></div>
+    <div id="cursorRing" class="cursor-ring"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-phone"></i> +1 (555) 200-7860</span>
+                <span><i class="fa-solid fa-envelope"></i> info@idealacademy.edu</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="student-dashboard.html" class="btn-portal-link"><i class="fa-solid fa-user-graduate"></i> Student Portal</a>
+                <div class="top-social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="mainHeader">
+        <nav class="navbar container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i class="fa-solid fa-star-and-crescent"></i></div>
+                <div class="logo-text"><span class="logo-title">Ideal Learning</span><span class="logo-subtitle">Academy</span></div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="academics.html" class="nav-link">Academics</a></li>
+                <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                <li><a href="islamic-life.html" class="nav-link">Islamic Life</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="admissions.html" class="btn btn-primary btn-sm">Apply Now</a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header bg-green-gradient text-center">
+        <div class="container">
+            <h1>Prayer Log</h1>
+            <p>Track your daily salah</p>
+        </div>
+    </section>
+
+    <!-- Prayer Log Form -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="prayer-log-card">
+                <h2>Log Today's Prayers</h2>
+                <div class="prayer-log-form">
+                    <label for="logDate">Date:</label>
+                    <input type="date" id="logDate">
+                    <div class="prayer-checkboxes">
+                        <label><input type="checkbox" class="prayer-check" data-prayer="Fajr"> Fajr</label>
+                        <label><input type="checkbox" class="prayer-check" data-prayer="Dhuhr"> Dhuhr</label>
+                        <label><input type="checkbox" class="prayer-check" data-prayer="Asr"> Asr</label>
+                        <label><input type="checkbox" class="prayer-check" data-prayer="Maghrib"> Maghrib</label>
+                        <label><input type="checkbox" class="prayer-check" data-prayer="Isha"> Isha</label>
+                    </div>
+                    <button id="savePrayerLog" class="btn btn-gold">Save</button>
+                    <p id="saveMessage" style="display:none; color: green;">Log saved!</p>
+                </div>
+            </div>
+
+            <div class="weekly-summary">
+                <h2>Weekly Summary</h2>
+                <div id="weeklySummaryContainer">
+                    <p>Loading summary...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo"><i class="fa-solid fa-star-and-crescent"></i><span>Ideal Learning Academy</span></div>
+                    <p>Balanced, faith-centered education since 2009.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="islamic-life.html">Islamic Life</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Student Resources</h4>
+                    <ul>
+                        <li><a href="student-dashboard.html">Dashboard</a></li>
+                        <li><a href="student-resources.html">Study Resources</a></li>
+                        <li><a href="student-prayer-log.html">Prayer Log</a></li>
+                        <li><a href="student-quran-tracker.html">Quran Tracker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Knowledge Crescent, Springfield, IL</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (555) 200-7860</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@idealacademy.edu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="container"><p>&copy; 2026 Ideal Learning Academy | <span class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span></p></div></div>
+    </footer>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/custom-cursor.js"></script>
+    <script src="js/student-login.js"></script>
+    <script>
+        // Mobile menu
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+        const mainHeader = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            mainHeader.classList.toggle('scrolled', window.scrollY > 80);
+        });
+
+        // Protect page
+        StudentAuth.protectPage();
+
+        // Prayer log functionality
+        const STORAGE_KEY = 'ila_prayer_logs';
+        const prayers = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
+
+        // Set date to today
+        const dateInput = document.getElementById('logDate');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.value = today;
+
+        // Load existing logs for selected date
+        function loadLogsForDate(date) {
+            const allLogs = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+            const dayLog = allLogs[date] || [];
+            document.querySelectorAll('.prayer-check').forEach(cb => {
+                cb.checked = dayLog.includes(cb.dataset.prayer);
+            });
+        }
+
+        dateInput.addEventListener('change', function() {
+            loadLogsForDate(this.value);
+        });
+
+        // Save button
+        document.getElementById('savePrayerLog').addEventListener('click', function() {
+            const date = dateInput.value;
+            const checkedPrayers = [];
+            document.querySelectorAll('.prayer-check:checked').forEach(cb => {
+                checkedPrayers.push(cb.dataset.prayer);
+            });
+            const allLogs = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+            allLogs[date] = checkedPrayers;
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(allLogs));
+            document.getElementById('saveMessage').style.display = 'block';
+            setTimeout(() => { document.getElementById('saveMessage').style.display = 'none'; }, 2000);
+            renderWeeklySummary();
+        });
+
+        // Weekly summary (last 7 days)
+        function renderWeeklySummary() {
+            const container = document.getElementById('weeklySummaryContainer');
+            const allLogs = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+            const days = [];
+            for (let i = 6; i >= 0; i--) {
+                const d = new Date();
+                d.setDate(d.getDate() - i);
+                const dateStr = d.toISOString().split('T')[0];
+                const dayName = d.toLocaleDateString('en-US', { weekday: 'short' });
+                const log = allLogs[dateStr] || [];
+                const completed = prayers.filter(p => log.includes(p)).length;
+                days.push({ date: dateStr, dayName, completed });
+            }
+            let html = '<table class="summary-table"><tr><th>Day</th><th>Date</th><th>Prayers Completed</th></tr>';
+            days.forEach(day => {
+                html += `<tr>
+                    <td>${day.dayName}</td>
+                    <td>${day.date}</td>
+                    <td>${day.completed}/${prayers.length} (${day.completed === prayers.length ? 'All' : day.completed})</td>
+                </tr>`;
+            });
+            html += '</table>';
+            container.innerHTML = html;
+        }
+
+        // Initialize
+        loadLogsForDate(today);
+        renderWeeklySummary();
+    </script>
+</body>
+</html>

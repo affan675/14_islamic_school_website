@@ -1,0 +1,229 @@
+/* =============================================================
+   IDEAL LEARNING ACADEMY – ADMISSIONS PAGE ENHANCED STYLES
+   Requires style.css (base variables & global rules)
+   ============================================================= */
+
+/* ---------- Page Header Override ---------- */
+.page-header {
+    padding: 80px 0 70px;
+    background: linear-gradient(135deg, #0A3D24 0%, #0D5C3B 40%, #1B7A45 100%);
+    position: relative;
+    overflow: hidden;
+}
+.page-header::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ---------- Steps Grid ---------- */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+.step {
+    background: #fff;
+    border-radius: 16px;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+.step:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-mid));
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.step h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 10px;
+}
+.step p {
+    font-size: 0.95rem;
+    color: var(--gray-500);
+    line-height: 1.7;
+}
+
+/* ---------- Two-column layout (Requirements & Fees) ---------- */
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 20px;
+}
+.two-col-grid h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 20px;
+}
+
+/* Checklist */
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+.checklist li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05rem;
+    color: var(--gray-700);
+}
+.checklist li i {
+    color: var(--green-mid);
+    font-size: 1.1rem;
+}
+
+/* Fee Table */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+.fee-table th,
+.fee-table td {
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 1rem;
+}
+.fee-table th {
+    background: var(--green-dark);
+    color: #fff;
+    font-weight: 600;
+}
+.fee-table tr:nth-child(even) {
+    background: var(--green-pale);
+}
+.fee-table tr:nth-child(odd) {
+    background: #fff;
+}
+.fee-table td {
+    color: var(--gray-700);
+}
+
+/* ---------- Application Form ---------- */
+.apply-form {
+    max-width: 700px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--gray-100);
+    border-radius: 12px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--gray-700);
+    background: #fff;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+    outline: none;
+    border-color: var(--gold-mid);
+    box-shadow: 0 0 0 4px var(--gold-pale);
+}
+.apply-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.apply-form button[type="submit"] {
+    align-self: center;
+    margin-top: 10px;
+}
+
+/* ---------- Small notes ---------- */
+.mt-1.text-center small,
+.mt-2.text-center em {
+    display: inline-block;
+    background: var(--gold-pale);
+    color: var(--green-dark);
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid var(--gold-light);
+    margin-top: 25px;
+}
+
+/* ---------- Responsive Fine‑tuning ---------- */
+@media (max-width: 1024px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.4rem;
+    }
+    .two-col-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .steps-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 480px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .step {
+        padding: 28px 15px;
+    }
+}

@@ -1,0 +1,174 @@
+/* =============================================================
+   IDEAL LEARNING ACADEMY – ISLAMIC LIFE PAGE ENHANCED STYLES
+   Requires style.css (base variables & global rules)
+   ============================================================= */
+
+/* ---------- Page Header Override ---------- */
+.page-header {
+    padding: 80px 0 70px;
+    background: linear-gradient(135deg, #0A3D24 0%, #0D5C3B 40%, #1B7A45 100%);
+    position: relative;
+    overflow: hidden;
+}
+.page-header::after {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    width: 160px;
+    height: 160px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ---------- Hijri Date & Daily Verse Banner ---------- */
+.hijri-display {
+    font-family: var(--font-arabic);
+    font-size: 1.6rem;
+    color: var(--gold-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.hijri-display i {
+    margin-right: 8px;
+    color: var(--green-mid);
+}
+.verse-display {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    border-left: 6px solid var(--gold-mid);
+}
+.verse-display .arabic-text {
+    font-family: var(--font-arabic);
+    font-size: 1.8rem;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.verse-display p {
+    font-size: 1rem;
+    color: var(--gray-700);
+    margin-bottom: 6px;
+}
+.verse-display small {
+    color: var(--gray-500);
+    font-style: italic;
+}
+
+/* ---------- Islamic Cards (Prayer, Jummah, Food, Dress) ---------- */
+.islamic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+.islamic-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.islamic-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.1);
+}
+.islamic-card::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 80px;
+    height: 80px;
+    background: var(--gold-pale);
+    border-radius: 50%;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.islamic-card i {
+    font-size: 2.5rem;
+    color: var(--gold-mid);
+    margin-bottom: 18px;
+    display: block;
+}
+.islamic-card h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+}
+.islamic-card p {
+    font-size: 1rem;
+    color: var(--gray-500);
+    line-height: 1.8;
+}
+
+/* ---------- Events List ---------- */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 30px auto 0;
+}
+.event-item {
+    background: #fff;
+    border-radius: 50px;
+    padding: 16px 28px;
+    font-size: 1.05rem;
+    color: var(--gray-700);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.2s;
+}
+.event-item i {
+    color: var(--gold-mid);
+    font-size: 1.3rem;
+}
+.event-item:hover {
+    background: var(--gold-pale);
+}
+
+/* ---------- Responsive Fine‑tuning ---------- */
+@media (max-width: 768px) {
+    .islamic-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-header h1 {
+        font-size: 2.4rem;
+    }
+    .verse-display .arabic-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .islamic-card {
+        padding: 30px 20px;
+    }
+    .event-item {
+        font-size: 0.95rem;
+        padding: 14px 20px;
+    }
+}

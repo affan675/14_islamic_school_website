@@ -1,0 +1,195 @@
+/* =============================================================
+   IDEAL LEARNING ACADEMY – RESPONSIVE STYLESHEET (responsive.css)
+   Minimum 80 lines – handles tablet and mobile layouts
+   ============================================================= */
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    padding: 80px 30px 30px;
+    box-shadow: var(--shadow-lg);
+    transition: right var(--transition-smooth);
+    z-index: 9995;
+    gap: 8px;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+  .hamburger {
+    display: flex;
+    z-index: 9996;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .welcome-image-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-stats {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 0;
+  }
+  .top-bar-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .top-bar-left {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .hero {
+    min-height: 500px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  .hero-stats {
+    gap: 16px;
+  }
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  .welcome-content .section-title {
+    font-size: 1.8rem;
+  }
+  .welcome-features {
+    grid-template-columns: 1fr;
+  }
+  .news-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .prayer-times-widget {
+    gap: 10px;
+  }
+  .prayer-card {
+    min-width: 100px;
+    padding: 16px 12px;
+  }
+  .prayer-card i {
+    font-size: 1.3rem;
+  }
+  .prayer-time {
+    font-size: 1.05rem;
+  }
+  .cta-title {
+    font-size: 1.8rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  .navbar {
+    padding: 10px 16px;
+  }
+  .logo-title {
+    font-size: 1rem;
+  }
+  .logo-icon i {
+    font-size: 1.8rem;
+  }
+  .hero-content {
+    padding: 50px 16px 70px;
+  }
+  .hero-title {
+    font-size: 1.65rem;
+  }
+  .hero-badge {
+    font-size: 0.78rem;
+    padding: 6px 16px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .section-label {
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+  }
+  .welcome-text {
+    font-size: 0.9rem;
+  }
+  .w-feature {
+    font-size: 0.85rem;
+  }
+  .prayer-card {
+    min-width: 85px;
+    padding: 12px 10px;
+  }
+  .prayer-name {
+    font-size: 0.8rem;
+  }
+  .prayer-time {
+    font-size: 0.95rem;
+  }
+  .news-card-body h4 {
+    font-size: 1rem;
+  }
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .preloader-logo i {
+    font-size: 2.5rem;
+  }
+  .preloader-stars .star {
+    font-size: 1.2rem;
+  }
+  .preloader-bar-container {
+    width: 200px;
+  }
+}

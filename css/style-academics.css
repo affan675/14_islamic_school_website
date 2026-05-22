@@ -1,0 +1,157 @@
+/* =============================================================
+   IDEAL LEARNING ACADEMY – ACADEMICS PAGE ENHANCED STYLES
+   Requires style.css (base variables & global rules)
+   ============================================================= */
+
+/* ---------- Page Header Override ---------- */
+.page-header {
+    padding: 80px 0 70px;
+    background: linear-gradient(135deg, #0A3D24 0%, #0D5C3B 40%, #1B7A45 100%);
+    position: relative;
+    overflow: hidden;
+}
+.page-header::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ---------- Dual Curriculum Grid (Modern STEAM & Islamic Studies) ---------- */
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 30px;
+}
+.curriculum-col {
+    background: #fff;
+    border-radius: 20px;
+    padding: 45px 35px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.curriculum-col:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px rgba(0,0,0,0.1);
+}
+.curriculum-col::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 90px;
+    height: 90px;
+    background: var(--gold-pale);
+    border-radius: 50%;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.curriculum-col h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--gray-900);
+}
+.curriculum-col h3 i {
+    color: var(--gold-mid);
+    margin-right: 12px;
+}
+.curriculum-col p {
+    font-size: 1.05rem;
+    color: var(--gray-500);
+    line-height: 1.9;
+}
+
+/* ---------- Grade Levels Cards ---------- */
+.grades-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+.grade-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+.grade-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.08);
+}
+.grade-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 12px;
+}
+.grade-card p {
+    font-size: 0.95rem;
+    color: var(--gray-500);
+    line-height: 1.7;
+}
+
+/* ---------- Note about Islamic rules ---------- */
+.mt-2.text-center strong {
+    display: inline-block;
+    background: var(--gold-pale);
+    color: var(--green-dark);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid var(--gold-light);
+    margin-top: 30px;
+}
+
+/* ---------- Responsive Fine‑tuning ---------- */
+@media (max-width: 1024px) {
+    .curriculum-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .grades-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.4rem;
+    }
+    .grades-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .curriculum-col {
+        padding: 30px 25px;
+    }
+    .grade-card {
+        padding: 25px 15px;
+    }
+}

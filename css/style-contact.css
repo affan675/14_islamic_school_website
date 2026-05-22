@@ -1,0 +1,161 @@
+/* =============================================================
+   IDEAL LEARNING ACADEMY – CONTACT PAGE ENHANCED STYLES
+   Requires style.css (base variables & global rules)
+   ============================================================= */
+
+/* ---------- Page Header Override ---------- */
+.page-header {
+    padding: 80px 0 70px;
+    background: linear-gradient(135deg, #0A3D24 0%, #0D5C3B 40%, #1B7A45 100%);
+    position: relative;
+    overflow: hidden;
+}
+.page-header::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ---------- Contact Grid (Info + Form) ---------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--gray-900);
+}
+
+/* Contact info list */
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+.contact-info ul li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--gray-700);
+    line-height: 1.5;
+}
+.contact-info ul li i {
+    color: var(--gold-mid);
+    font-size: 1.3rem;
+    margin-top: 3px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Map container */
+.map-container {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    margin-top: 20px;
+    border: 1px solid var(--gray-100);
+}
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 250px;
+    border: 0;
+}
+.map-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    padding: 8px;
+    background: #fff;
+}
+
+/* ---------- Contact Form ---------- */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--gray-100);
+    border-radius: 12px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--gray-700);
+    background: #fff;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gold-mid);
+    box-shadow: 0 0 0 4px var(--gold-pale);
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-top: 5px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .page-header h1 {
+        font-size: 2.4rem;
+    }
+    .map-container iframe {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 1.6rem;
+    }
+}
