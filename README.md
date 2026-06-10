@@ -398,10 +398,9 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 **Created with ❤️ for Islamic Education**
 
-- 📧 Email: [Your Email]
-- 🐙 GitHub: [Your GitHub Profile]
-- 🌐 Website: [Your Portfolio]
-- 💼 LinkedIn: [Your LinkedIn]
+- 📧 Email: [affanadil119@gmail.com]
+- 🐙 GitHub: [https://github.com/affan675/]
+- 🌐 Website: [https://affan675.github.io/01_portfolio_v2/]
 
 ### Contributing
 
